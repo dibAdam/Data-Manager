@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: center;
+}
+
+.form-wrapper {
+    display: grid;
+    place-items: center;
+    margin: auto;
+}
+
+.form-wrapper .btn {
+    width: 4rem;
+    aspect-ratio: 2/1;
+    margin-top: 1rem;
+    position:relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.form-wrapper .name {
+    width: 10rem;
+    height: 1rem;
+    padding:5px 1px;
+}
