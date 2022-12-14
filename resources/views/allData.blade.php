@@ -29,6 +29,8 @@
 	<link rel="stylesheet" href="{{url('css/toastr.css')}}" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="{{url('js/toastr.min.js')}}"></script>
+
+
 	
 </head>
 
@@ -401,7 +403,7 @@
 								table.row.add({
 									"Domain": i,
 									"Number": obj[i],
-									"Action": `<button onclick='getdomainName("${i.trim()}")' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#myModal2'>Select</button>`,
+									"Action": `<button onclick='getdomainName("${i.trim()}")' class='btn btn-primary' style="width:10rem;position:relative; left:50%;transform:translateX(-50%);" data-bs-toggle='modal' data-bs-target='#myModal2'>Select</button>`,
 								});
 							}
 							table.draw();
