@@ -24,7 +24,6 @@ use App\Models\Isp;
 
 
 Route::get('/allData',[generalController::class,'index']);
-Route::get('/welcome',[generalController::class,'toWelcome']);
 
 Route::post('/insert',[emailInsertController::class, 'insert']);
 Route::post('/insertGeo',[emailInsertController::class, 'insertGeo']);

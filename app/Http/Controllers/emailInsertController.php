@@ -45,8 +45,6 @@ class emailInsertController extends Controller
             }
             else
             {
-                info(2);
-
                 return response()->json(["success"=>false, "msg"=>"Fill All The Inputs"]);
             }
 
@@ -83,7 +81,7 @@ class emailInsertController extends Controller
         public function insertIsp(Request $request) {
             if(!empty($request->name)) 
             {
-                if(ctype_alpha($request->name))
+                if(ctype_alpha(str_replace(' ', '', $request->name)))
                 {
                     
                     $isp = new Isp;

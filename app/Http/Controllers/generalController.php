@@ -38,11 +38,6 @@ class generalController extends Controller
         return view('allData',['geos' => $geos, 'isps' => $isps,'emailLists' => $emailLists,'allEmailLists' => $allEmailLists]);
     }
 
-    public function toWelcome() {
-        $geos = Geo::all();
-        $isps = Isp::all();
 
-        return view('welcome',['geos' => $geos, 'isps' => $isps]);
-    }
     
 }

@@ -454,9 +454,6 @@
 		function selectList(listName)
 		{
 			domain_selected = document.getElementById("domain_selected").value;
-			// console.log(listName);
-			// console.log(domain_selected);
-			
 			
 			var data = {
 				"_token": "{{ csrf_token() }}",
