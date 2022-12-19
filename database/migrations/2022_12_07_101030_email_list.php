@@ -17,10 +17,11 @@ class EmailList extends Migration
         Schema::connection('pgsql')->create('emails', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable(false)->unique();
-            $table->integer('isp_id')->nullable(false)->foreign('isp_id')->references('isp_id')->on('ISP');
+            $table->string('domain')->nullable(false);
+            $table->integer('isp_id')->nullable(true)->foreign('isp_id')->references('isp_id')->on('ISP');
             $table->integer('geo_id')->nullable(false)->foreign('geo_id')->references('geo_id')->on('GEO');
             $table->string('list_id')->nullable(false);
-            $table->string('mx');
+            $table->string('mx')->nullable(true);
             $table->integer('mbr')->default(0);
 
         });

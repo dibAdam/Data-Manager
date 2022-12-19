@@ -26,10 +26,11 @@ class generalController extends Controller
         ->orderBy('emails.id', 'asc')
         ->get();
 
-        //select all emails and display them in a group with all
+
+        //select all emails and display them grouped by list_id
         $allEmailLists = DB::table("emails")
         ->join("geos", "geos.id", "emails.geo_id")
-        ->join("isps", "isps.id", "emails.isp_id")
+        ->leftjoin("isps", "isps.id", "emails.isp_id")
         ->select("emails.*", "geos.geo_name", "isps.isp_name")
         ->get()
         ->groupBy('list_id');
