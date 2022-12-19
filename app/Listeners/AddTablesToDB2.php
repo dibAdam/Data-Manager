@@ -38,7 +38,7 @@ class AddTablesToDB2
         info($email->name);
         if (!Schema::connection('pgsql2')->hasTable($email->name)) {
                 Schema::connection('pgsql2')->create($email->name, function (Blueprint $table) {
-                    $table->id('id');
+                    $table->id();
                     $table->string('email')->nullable(false)->unique();
                     $table->string('email_md5')->nullable(false);
                     $table->timestamps();
